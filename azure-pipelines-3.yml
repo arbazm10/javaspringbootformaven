@@ -1,5 +1,4 @@
-trigger:
-name: "master"
+trigger: none
 
 pool:
   vmImage: 'ubuntu-latest' 
