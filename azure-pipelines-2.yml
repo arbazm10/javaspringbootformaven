@@ -10,6 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '**/app/pom.xml'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 - task: Maven@3
   inputs:
     mavenPomFile: '**/app/pom.xml'
